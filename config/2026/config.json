@@ -173,26 +173,13 @@
                 },
                 {
                     "title": "Shooting Positions Map",
-                    "description": "Where did the team shoot the most frequently from?",
-                    "type": "multi-select",
+                    "description": "Tap the map to add shooting positions.",
+                    "type": "map",
                     "required": false,
                     "code": "shootingPositions",
                     "formResetBehavior": "reset",
                     "defaultValue": [],
-                    "choices": {
-                        "OT": "Outpost Trench",
-                        "OBFT": "Outpost Bump Favoring Trench",
-                        "OBFH": "Outpost Bump Favoring Hub",
-                        "H": "Hub",
-                        "DBFH": "Depot Bump Favoring Hub",
-                        "DBFT": "Depot Bump Favoring Trench",
-                        "DT": "Depot Trench",
-                        "Sub": "Subwoofer",
-                        "Pod": "Podium",
-                        "Amp": "Amp Zone",
-                        "Source": "Source Zone",
-                        "Mid": "Midfield"
-                    }
+                    "imageSrc": "https://dummyimage.com/600x340/e2e8f0/64748b.png&text=2026+Field+Map+Placeholder"
                 },
                 {
                     "title": "Not active? Y/N",

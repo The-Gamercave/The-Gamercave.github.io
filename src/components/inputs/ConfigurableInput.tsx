@@ -9,6 +9,7 @@ import SelectInput from './SelectInput';
 import StringInput from './StringInput';
 import TimerInput from './TimerInput';
 import MultiSelectInput from './MultiSelectInput';
+import MapInput from './MapInput';
 import TBATeamAndRobotInput from './TBATeamAndRobotInput';
 import TBAMatchNumberInput from './TBAMatchNumberInput';
 export interface ConfigurableInputProps {
@@ -37,6 +38,8 @@ export default function ConfigurableInput(props: ConfigurableInputProps) {
       return <TimerInput {...props} key={props.code} />;
     case 'multi-select':
       return <MultiSelectInput {...props} key={props.code} />;
+    case 'map':
+      return <MapInput {...props} key={props.code} />;
     case 'action-tracker':
       return <ActionTrackerInput {...props} key={props.code} />;
     case 'TBA-team-and-robot':

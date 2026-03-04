@@ -10,6 +10,7 @@ export const inputTypeSchema = z
     'counter',
     'timer',
     'multi-select',
+    'map',
     'image',
     'action-tracker',
     'TBA-team-and-robot',
@@ -58,6 +59,12 @@ export const multiSelectInputSchema = inputBaseSchema.extend({
   type: z.literal('multi-select'),
   choices: z.record(z.string()).optional().describe('The choices'),
   defaultValue: z.array(z.string()).optional().describe('The default value'),
+});
+
+export const mapInputSchema = inputBaseSchema.extend({
+  type: z.literal('map'),
+  imageSrc: z.string().optional().describe('The background image to display (can be absolute or relative URL)'),
+  defaultValue: z.array(z.object({ x: z.number(), y: z.number() })).optional().describe('The default mapped points'),
 });
 
 export const counterInputSchema = inputBaseSchema.extend({
@@ -166,6 +173,7 @@ export const sectionSchema = z.object({
       numberInputSchema,
       selectInputSchema,
       multiSelectInputSchema,
+      mapInputSchema,
       rangeInputSchema,
       booleanInputSchema,
       timerInputSchema,
@@ -321,6 +329,7 @@ export type InputTypes = z.infer<typeof inputTypeSchema>;
 export type InputBase = z.infer<typeof inputBaseSchema>;
 export type SelectInputData = z.infer<typeof selectInputSchema>;
 export type MultiSelectInputData = z.infer<typeof multiSelectInputSchema>;
+export type MapInputData = z.infer<typeof mapInputSchema>;
 export type StringInputData = z.infer<typeof stringInputSchema>;
 export type NumberInputData = z.infer<typeof numberInputSchema>;
 export type CounterInputData = z.infer<typeof counterInputSchema>;
@@ -342,6 +351,7 @@ export type InputPropsMap = {
   range: RangeInputData;
   select: SelectInputData;
   'multi-select': MultiSelectInputData;
+  map: MapInputData;
   counter: CounterInputData;
   timer: TimerInputData;
   image: ImageInputData;
