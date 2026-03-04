@@ -1,0 +1,292 @@
+{
+    "title": "QRScout",
+    "page_title": "Rebuilt",
+    "delimiter": "\t",
+    "teamNumber": 2713,
+    "floatingField": {
+        "show": false,
+        "codeValue": "teamNumber"
+    },
+    "theme": {
+        "light": {
+            "background": "0 0% 100%",
+            "foreground": "0 0% 3.9%",
+            "card": "0 0% 100%",
+            "card_foreground": "0 0% 3.9%",
+            "popover": "0 0% 100%",
+            "popover_foreground": "0 0% 3.9%",
+            "primary": "354.44 71.3% 47.9%",
+            "primary_foreground": "0 85.7% 97.3%",
+            "secondary": "0 0% 96.1%",
+            "secondary_foreground": "0 0% 9%",
+            "muted": "0 0% 96.1%",
+            "muted_foreground": "0 0% 45.1%",
+            "accent": "0 0% 96.1%",
+            "accent_foreground": "0 0% 9%",
+            "destructive": "0 84.2% 60.2%",
+            "destructive_foreground": "0 0% 98%",
+            "border": "0 0% 89.8%",
+            "input": "0 0% 89.8%",
+            "ring": "354.44 71.3% 47.9%",
+            "chart_1": "12 76% 61%",
+            "chart_2": "173 58% 39%",
+            "chart_3": "197 37% 24%",
+            "chart_4": "43 74% 66%",
+            "chart_5": "27 87% 67%"
+        },
+        "dark": {
+            "background": "0 0% 3.9%",
+            "foreground": "0 0% 98%",
+            "card": "0 0% 3.9%",
+            "card_foreground": "0 0% 98%",
+            "popover": "0 0% 3.9%",
+            "popover_foreground": "0 0% 98%",
+            "primary": "354.44 71.3% 47.9%",
+            "primary_foreground": "0 85.7% 97.3%",
+            "secondary": "0 0% 14.9%",
+            "secondary_foreground": "0 0% 98%",
+            "muted": "0 0% 14.9%",
+            "muted_foreground": "0 0% 63.9%",
+            "accent": "0 0% 14.9%",
+            "accent_foreground": "0 0% 98%",
+            "destructive": "0 62.8% 30.6%",
+            "destructive_foreground": "0 0% 98%",
+            "border": "0 0% 14.9%",
+            "input": "0 0% 14.9%",
+            "ring": "354.44 71.3% 47.9%",
+            "chart_1": "220 70% 50%",
+            "chart_2": "160 60% 45%",
+            "chart_3": "30 80% 55%",
+            "chart_4": "280 65% 60%",
+            "chart_5": "340 75% 55%"
+        }
+    },
+    "sections": [
+        {
+            "name": "Prematch",
+            "fields": [
+                {
+                    "title": "Scouter Name",
+                    "description": "Enter the name of the scouter.",
+                    "type": "text",
+                    "required": true,
+                    "code": "scouter",
+                    "formResetBehavior": "preserve",
+                    "defaultValue": ""
+                },
+                {
+                    "title": "Team Number",
+                    "description": "Enter the team number.",
+                    "type": "number",
+                    "required": true,
+                    "code": "teamNumber",
+                    "formResetBehavior": "preserve",
+                    "defaultValue": 0
+                },
+                {
+                    "title": "Match Number",
+                    "description": "Enter the match number.",
+                    "type": "number",
+                    "required": true,
+                    "code": "matchNumber",
+                    "formResetBehavior": "increment",
+                    "defaultValue": 1
+                },
+                {
+                    "title": "Team Color",
+                    "description": "Select the team color.",
+                    "type": "select",
+                    "required": true,
+                    "code": "teamColor",
+                    "formResetBehavior": "preserve",
+                    "defaultValue": "Red",
+                    "choices": {
+                        "Red": "Red",
+                        "Blue": "Blue"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Autonomous",
+            "fields": [
+                {
+                    "title": "Number of trips",
+                    "description": "How many trips were made in autonomous?",
+                    "type": "counter",
+                    "required": false,
+                    "code": "autoTrips",
+                    "formResetBehavior": "reset",
+                    "defaultValue": 0,
+                    "min": 0,
+                    "step": 1
+                },
+                {
+                    "title": "Climb Y/N",
+                    "description": "Did the robot climb during autonomous?",
+                    "type": "boolean",
+                    "required": false,
+                    "code": "autoClimb",
+                    "formResetBehavior": "reset",
+                    "defaultValue": false
+                },
+                {
+                    "title": "Not active? Y/N",
+                    "description": "Was the robot not active during auto?",
+                    "type": "boolean",
+                    "required": false,
+                    "code": "autoNotActive",
+                    "formResetBehavior": "reset",
+                    "defaultValue": false
+                }
+            ]
+        },
+        {
+            "name": "Teleop",
+            "fields": [
+                {
+                    "title": "Number of trips",
+                    "description": "How many trips were made in teleop?",
+                    "type": "counter",
+                    "required": false,
+                    "code": "teleopTrips",
+                    "formResetBehavior": "reset",
+                    "defaultValue": 0,
+                    "min": 0,
+                    "step": 1
+                },
+                {
+                    "title": "Approx Load",
+                    "description": "Approximate load level.",
+                    "type": "select",
+                    "required": false,
+                    "code": "approxLoad",
+                    "formResetBehavior": "reset",
+                    "defaultValue": "Low",
+                    "choices": {
+                        "None": "None",
+                        "Low": "Low",
+                        "Medium": "Medium",
+                        "High": "High",
+                        "Full": "Full"
+                    }
+                },
+                {
+                    "title": "Shooting Positions Map",
+                    "description": "Where did the team shoot the most frequently from?",
+                    "type": "multi-select",
+                    "required": false,
+                    "code": "shootingPositions",
+                    "formResetBehavior": "reset",
+                    "defaultValue": [],
+                    "choices": {
+                        "OT": "Outpost Trench",
+                        "OBFT": "Outpost Bump Favoring Trench",
+                        "OBFH": "Outpost Bump Favoring Hub",
+                        "H": "Hub",
+                        "DBFH": "Depot Bump Favoring Hub",
+                        "DBFT": "Depot Bump Favoring Trench",
+                        "DT": "Depot Trench",
+                        "Sub": "Subwoofer",
+                        "Pod": "Podium",
+                        "Amp": "Amp Zone",
+                        "Source": "Source Zone",
+                        "Mid": "Midfield"
+                    }
+                },
+                {
+                    "title": "Not active? Y/N",
+                    "description": "Was the robot not active during teleop?",
+                    "type": "boolean",
+                    "required": false,
+                    "code": "teleopNotActive",
+                    "formResetBehavior": "reset",
+                    "defaultValue": false
+                }
+            ]
+        },
+        {
+            "name": "Endgame",
+            "fields": [
+                {
+                    "title": "Climb Y/N",
+                    "description": "Did the robot climb?",
+                    "type": "boolean",
+                    "required": false,
+                    "code": "endgameClimb",
+                    "formResetBehavior": "reset",
+                    "defaultValue": false
+                },
+                {
+                    "title": "Climb Lvl 1 2 3",
+                    "description": "Which level did they climb to?",
+                    "type": "select",
+                    "required": false,
+                    "code": "endgameClimbLevel",
+                    "formResetBehavior": "reset",
+                    "defaultValue": "None",
+                    "choices": {
+                        "None": "None",
+                        "L1": "Level 1",
+                        "L2": "Level 2",
+                        "L3": "Level 3"
+                    }
+                },
+                {
+                    "title": "Shoots from multiple angles? Y/N",
+                    "description": "Can the robot shoot from multiple angles?",
+                    "type": "boolean",
+                    "required": false,
+                    "code": "multipleAngles",
+                    "formResetBehavior": "reset",
+                    "defaultValue": false
+                },
+                {
+                    "title": "Under or over",
+                    "description": "Does the robot shoot under, over, both, or neither?",
+                    "type": "select",
+                    "required": false,
+                    "code": "underOrOver",
+                    "formResetBehavior": "reset",
+                    "defaultValue": "Neither",
+                    "choices": {
+                        "Neither": "Neither",
+                        "Under": "Under",
+                        "Over": "Over",
+                        "Both": "Both"
+                    }
+                },
+                {
+                    "title": "Defend? Y/N",
+                    "description": "Did the robot play defense?",
+                    "type": "boolean",
+                    "required": false,
+                    "code": "defend",
+                    "formResetBehavior": "reset",
+                    "defaultValue": false
+                },
+                {
+                    "title": "Flying carpet? Y/N",
+                    "description": "Did the robot use a flying carpet?",
+                    "type": "boolean",
+                    "required": false,
+                    "code": "flyingCarpet",
+                    "formResetBehavior": "reset",
+                    "defaultValue": false
+                },
+                {
+                    "title": "Accuracy 1-5",
+                    "description": "Rate the robot's accuracy from 1 to 5.",
+                    "type": "range",
+                    "required": false,
+                    "code": "accuracy",
+                    "formResetBehavior": "reset",
+                    "defaultValue": 3,
+                    "min": 1,
+                    "max": 5,
+                    "step": 1
+                }
+            ]
+        }
+    ]
+}
